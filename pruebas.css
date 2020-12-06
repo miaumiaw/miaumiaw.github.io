@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          overflow: hidden;
+}
+
+html {font-family: "roboto";}
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #3e3e3e;
+  padding: 1em;
+}
+
+
+.flexColumna {display:flex;flex-direction: column; }
+.flex {width: 100%; display: flex; }
+
+.colorSM {background-color:#dbfff6;}
+
+#cajaGlobal {background-color: #b7fffe; padding: 1vh;height:100%; width: 100%;justify-content: space-between;}
+
+#cajaGlobal + div {font-family: "pixelar";font-size: 1vh;}
+
+   /*AVATAR Y DATOS PERSONALES */
+#cajaGlobal > div:nth-child(1) {display:flex;height: 50%; justify-content: space-between;}
+  /*CAJA DEL AVATAR [HEADER]*/
+  #cajaGlobal > div:nth-child(1) > header {width:35%; margin-right: 0.5vh; padding: 0.5vh;}
+    /*AVATAR [ARTICLE]*/
+     #cajaGlobal > div:nth-child(1) > header > article {transform:rotateY(180deg);background: url('avatar.png'); background-size: cover;background-clip: content-box; height: 100%;background-position: center;}
+    
+  /*CAJA DE DATOS [SECTION]*/
+  #cajaGlobal > div:nth-child(1) > section  {flex-grow: 2; justify-content: space-around;/*! padding: 1em; */}
+      /*TITULO DATOS [P]*/
+      #cajaGlobal > div:nth-child(1) > section > p {height: 20%; text-align: center;color: #ffa5fc;}
+      /*DATOS [ARTICLE in LIST]*/
+      #cajaGlobal > div:nth-child(1) > section > div {height: 80%;padding: 0.5vh;flex-direction: row;flex-wrap: wrap;}
+#cajaGlobal > div:nth-child(1) > section > div article {height: 10%; padding-bottom: 10%;}
+        #cajaGlobal > div:nth-child(1) > section > div article:nth-child(odd) {width:10% !important; background-color: #ffa5fc;margin-right: 1vh;}
+        #cajaGlobal > div:nth-child(1) > section > div article:nth-child(even) {/*! width:80% !important; */ background-color: #fff;width: 85%;border: solid #ffa5fc;border-width: 0 5px;color: gray;}
+
+#cajaGlobal > div:nth-child(2) {display:flex; flex-wrap: wrap; height: 32%;justify-content: space-between;padding: 0.5em;}
+  
+#cajaGlobal > div:nth-child(2) section {width: 67%;/*! padding: 0.5em; */}
+  #cajaGlobal > div:nth-child(2) section p {background-color: white; padding:2vh; color: gray; text-align: justify;}
+  
+#cajaGlobal > div:nth-child(2) aside {width: 30%;display: flex;flex-wrap: wrap;justify-content: space-between;align-content: space-between;}
+  #cajaGlobal > div:nth-child(2) aside > img {height: 0; width: 31%; padding-bottom: 31%;background: white;}
+
+#cajaGlobal > div:nth-child(3) {height: 15%; }
+#cajaGlobal > div:nth-child(3) article { background: url('cuadro.svg') no-repeat; height:100%;width: 50%;background-size: contain;}
+  #cajaGlobal > div:nth-child(3) p {color: white; text-align: center; font-family: "luckiest guy"; }
+
+
