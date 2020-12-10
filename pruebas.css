@@ -1,3 +1,4 @@
+/*ATTRIBUTOS GLOBALES*/
 * {
   margin: 0;
   padding: 0;
@@ -10,50 +11,45 @@
 html {font-family: "roboto";}
 
 
-body {
-  width: 100vw;
-  height: 100vh;
-  background: #3e3e3e;
-  padding: 1em;
-}
-
-
-.flexColumna {display:flex;flex-direction: column; }
+.e {width: 100%; height: 100%;}
 .flex {width: 100%; display: flex; }
+.cajaCentrada { justify-content:center;align-items:center; }
+.flexColumna { display:flex;flex-direction: column; }
 
-.colorSM {background-color:#dbfff6;}
 
-#cajaGlobal {background-color: #b7fffe; padding: 1vh;height:100%; width: 100%;justify-content: space-between;}
+body {width: 100vw;height: 100vh;background: #fff;}
 
-#cajaGlobal + div {font-family: "pixelar";font-size: 1vh;}
 
-   /*AVATAR Y DATOS PERSONALES */
-#cajaGlobal > div:nth-child(1) {display:flex;height: 50%; justify-content: space-between;}
-  /*CAJA DEL AVATAR [HEADER]*/
-  #cajaGlobal > div:nth-child(1) > header {width:35%; margin-right: 0.5vh; padding: 0.5vh;}
-    /*AVATAR [ARTICLE]*/
-     #cajaGlobal > div:nth-child(1) > header > article {transform:rotateY(180deg);background: url('avatar.png'); background-size: cover;background-clip: content-box; height: 100%;background-position: center;}
-    
-  /*CAJA DE DATOS [SECTION]*/
-  #cajaGlobal > div:nth-child(1) > section  {flex-grow: 2; justify-content: space-around;/*! padding: 1em; */}
-      /*TITULO DATOS [P]*/
-      #cajaGlobal > div:nth-child(1) > section > p {height: 20%; text-align: center;color: #ffa5fc;}
-      /*DATOS [ARTICLE in LIST]*/
-      #cajaGlobal > div:nth-child(1) > section > div {height: 80%;padding: 0.5vh;flex-direction: row;flex-wrap: wrap;}
-#cajaGlobal > div:nth-child(1) > section > div article {height: 10%; padding-bottom: 10%;}
-        #cajaGlobal > div:nth-child(1) > section > div article:nth-child(odd) {width:10% !important; background-color: #ffa5fc;margin-right: 1vh;}
-        #cajaGlobal > div:nth-child(1) > section > div article:nth-child(even) {/*! width:80% !important; */ background-color: #fff;width: 85%;border: solid #ffa5fc;border-width: 0 5px;color: gray;}
+.wrapper {z-index:10000; width: 3vh; height: 3vh;position: absolute; right: 0; margin: 2vh;
+cursor: pointer;transition: background-image 5s ease-in-out; background-image: url('assets/wrapper.svg'); background-repeat: no-repeat; background-size: contain;  }
+.wrapperCruz { transition: background-image 5s ease-in-out;background-image: url('assets/cruz.svg'); }
 
-#cajaGlobal > div:nth-child(2) {display:flex; flex-wrap: wrap; height: 32%;justify-content: space-between;padding: 0.5em;}
-  
-#cajaGlobal > div:nth-child(2) section {width: 67%;/*! padding: 0.5em; */}
-  #cajaGlobal > div:nth-child(2) section p {background-color: white; padding:2vh; color: gray; text-align: justify;}
-  
-#cajaGlobal > div:nth-child(2) aside {width: 30%;display: flex;flex-wrap: wrap;justify-content: space-between;align-content: space-between;}
-  #cajaGlobal > div:nth-child(2) aside > img {height: 0; width: 31%; padding-bottom: 31%;background: white;}
 
-#cajaGlobal > div:nth-child(3) {height: 15%; }
-#cajaGlobal > div:nth-child(3) article { background: url('cuadro.svg') no-repeat; height:100%;width: 50%;background-size: contain;}
-  #cajaGlobal > div:nth-child(3) p {color: white; text-align: center; font-family: "luckiest guy"; }
+/* MENU WRAPPER */
+.wrapperMenu { position:absolute; display:none; z-index: 9999; background-color: rgba(0, 255, 221, 0.5); }
+.wrapperMenu div {}
+/* PANTALLA PRINCIPAL */
+
+.cajaGlobal { position: absolute; justify-content: space-between; }
+.cajaGlobal > div {width: 100%;}
+
+.canvas {display: flex; height: 40%;}
+  .canvas object {position:absolute;}  
+.cuadro {height: 40%;}
+.boton {height: 20%;}
+
+
+
+
+
+.canvas object:nth-child(1) { width: 20%; animation: ani1 5s infinite; }
+  .canvas object:nth-child(2) { width: 30%; animation: ani2 5s infinite;}
+  .canvas object:nth-child(3) { width: 50%; animation: ani3 5s infinite; }
+  .canvas object:nth-child(4) { width: 60%; animation: ani3 5s infinite; }
+
+@keyframes ani1 {from {} to {} }
+@keyframes ani2 {from {} to {transform: rotate(12rad)} }
+@keyframes ani3 {from {} to {transform: rotate(6rad)} }
+@keyframes ani4 {from {} to {transform: rotate(39rad)} }
 
 
