@@ -1,4 +1,3 @@
-
 let y = document.getElementsByClassName('wrapper')[0];
 y.addEventListener('click', function wrappers() {
     let x = document.getElementsByClassName('wrapperMenu')[0];

@@ -26,8 +26,10 @@ cursor: pointer;transition: background-image 5s ease-in-out; background-image: u
 
 
 /* MENU WRAPPER */
-.wrapperMenu { position:absolute; display:none; z-index: 9999; background-color: rgba(0, 255, 221, 0.5); }
-.wrapperMenu div {}
+.wrapperMenu { position:absolute; display:none; z-index: 9999; background-color: rgba(0, 255, 221, 0.5); padding: 5vh 1vh;}
+.wrapperMenu div {/*! background: #00e7ffb5; */height: 10%;margin: 2vh 1vw;color: white;display: flex;}
+.wrapperMenu div article:nth-child(1) {width: 10vh;background: #ffa4ee;margin-right: 2vh;}
+.wrapperMenu div article:nth-child(2) {width: 100%;background: #00f3ff;font-size: 4vh;padding: 2.5vh;display: flex;align-self: center;}
 /* PANTALLA PRINCIPAL */
 
 .cajaGlobal { position: absolute; justify-content: space-between; }
@@ -51,5 +53,3 @@ cursor: pointer;transition: background-image 5s ease-in-out; background-image: u
 @keyframes ani2 {from {} to {transform: rotate(12rad)} }
 @keyframes ani3 {from {} to {transform: rotate(6rad)} }
 @keyframes ani4 {from {} to {transform: rotate(39rad)} }
-
-
